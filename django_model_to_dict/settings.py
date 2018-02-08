@@ -1,6 +1,10 @@
 from django.conf import settings
 
-DEFAULT_SERIALIZATION_PLUGINS = tuple()
+DEFAULT_SERIALIZATION_PLUGINS = (
+    'django_model_to_dict.plugins.serialization.imagefile_field.ImageFieldSerializationPlugin',
+    'django_model_to_dict.plugins.serialization.date_field.DateFieldSerializationPlugin',
+    'django_model_to_dict.plugins.serialization.datetime_field.DateTimeFieldSerializationPlugin',
+)
 DEFAULT_SKIP = tuple()
 DEFAULT_GROUPING = {}
 DEFAULT_PREFIXES = tuple()
