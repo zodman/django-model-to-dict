@@ -4,6 +4,7 @@ DEFAULT_SERIALIZATION_PLUGINS = (
     'django_model_to_dict.plugins.serialization.imagefile_field.ImageFieldSerializationPlugin',
     'django_model_to_dict.plugins.serialization.date_field.DateFieldSerializationPlugin',
     'django_model_to_dict.plugins.serialization.datetime_field.DateTimeFieldSerializationPlugin',
+    'django_model_to_dict.plugins.serialization.time_field.TimeFieldSerializationPlugin',
 )
 DEFAULT_SKIP = tuple()
 DEFAULT_GROUPING = {}
