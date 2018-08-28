@@ -269,7 +269,8 @@ class ToDictMixin:
                 if hasattr(related_object, 'to_dict'):
                     result[rf.name] = related_object.to_dict(inspect_related_objects=False)
             if rf.many_to_many:
-                print('many_to_many', rf.name, rf)
+                pass
+                #print('many_to_many', rf.name, rf)
 
 
     def _get_prefix(self, field_name):
