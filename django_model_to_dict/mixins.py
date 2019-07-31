@@ -265,9 +265,12 @@ class ToDictMixin:
                 result[rf.related_name] = [
                     i.to_dict(inspect_related_objects=False) for i in getattr(self, rf.related_name).all()]
             if rf.many_to_one or rf.one_to_one:
-                related_object = getattr(self, rf.name)
-                if hasattr(related_object, 'to_dict'):
-                    result[rf.name] = related_object.to_dict(inspect_related_objects=False)
+                if hasattr(self, rf.name):
+                    related_object = getattr(self, rf.name)
+                    if hasattr(related_object, 'to_dict'):
+                        result[rf.name] = related_object.to_dict(inspect_related_objects=False)
+                else:
+                    pass
             if rf.many_to_many:
                 pass
                 #print('many_to_many', rf.name, rf)
