@@ -16,7 +16,7 @@ https://gist.github.com/gbezyuk/de29d4888818b87f8addd8143b5331e0
 Requirements
 ------------
 
-Currently the package is tested with Python3 and Django 1.10 only.
+Currently the package is tested with Python3 and Django> 2.0
 
 Documentation
 -------------
